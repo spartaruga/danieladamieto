@@ -247,6 +247,32 @@
       line-height: 1.72;
     }
 
+
+    .hero-title {
+      max-width: none;
+      white-space: nowrap;
+      font-size: clamp(42px, 4.8vw, 64px);
+    }
+
+    .hero-title span {
+      display: inline;
+    }
+
+    .hero-title span + span::before {
+      content: " ";
+    }
+
+    @media (min-width: 981px) {
+      .hero-grid {
+        grid-template-columns: minmax(0, 1.25fr) minmax(360px, 0.75fr);
+        gap: 36px;
+      }
+
+      .portrait-card {
+        min-height: 520px;
+      }
+    }
+
     .lead {
       max-width: 690px;
       font-size: clamp(20px, 2.3vw, 28px);
@@ -913,6 +939,20 @@
         padding-top: 118px;
       }
 
+
+      .hero-title {
+        white-space: normal;
+        font-size: clamp(44px, 13vw, 62px);
+      }
+
+      .hero-title span {
+        display: block;
+      }
+
+      .hero-title span + span::before {
+        content: "";
+      }
+
       .hero-actions,
       .contact-actions {
         flex-direction: column;
@@ -1026,8 +1066,7 @@
         <div class="section-inner hero-grid">
           <div>
             <span class="eyebrow">Psicologa a Torino e online</span>
-            <h1>Dottoressa</h1>
-            <h1>Daniela Damieto</h1>
+            <h1 class="hero-title"><span>Dottoressa</span><span>Daniela Damieto</span></h1>
             <p class="lead">
               Un percorso concreto per comprendere ciò che senti e trasformarlo in risorsa.
             </p>
